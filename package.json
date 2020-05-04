@@ -1,0 +1,39 @@
+{
+  "name": "stock_project_nodejs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start bin/www",
+<<<<<<< HEAD
+    "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "mocha test/index.js --exit"
+>>>>>>> bd9c54d54efc2be4619df890b8740f9623228cbd
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-favicon": "^2.0.1",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "mongoose": "^5.8.7",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+<<<<<<< HEAD
+    "nodemon": "^2.0.2"
+=======
+    "chai": "^4.2.0",
+    "nock": "^12.0.3",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+>>>>>>> bd9c54d54efc2be4619df890b8740f9623228cbd
+  }
+}

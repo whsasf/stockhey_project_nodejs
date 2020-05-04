@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 上市公司市值排行榜-中国上市公司市值排行
+    meta(name='google-site-verification' content='9hqB8FQbiTlIrkzcoBM8BC5X4ZQ2FEE1am7bTFSrnEk')
+    // load css
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css' rel='stylesheet')
+    link(rel='stylesheet' href='/stylesheets/ech_all.css')
+    link(rel='stylesheet' href='/stylesheets/bootstrap-table.min.css')
+    link(rel='stylesheet' href='/stylesheets/style.css') 
+  body
+  // include 'back to top'
+  include back_to_top.pug 
+  // include banner
+  include _banner.pug
+  // table display
+  div(id='loading' style='display:none;padding-top :250px;padding-left :50%;position:absolute;z-index:1;')
+    svg#Layer_1(version='1.1' x='0px' y='0px' width='24px' height='30px' viewbox='0 0 24 30' style='enable-background:new 0 0 50 50;' xml:space='preserve')
+      rect(x='0' y='0' width='4' height='20' fill='#333' transform='translate(0 15.1665)')
+        animatetransform(attributetype='xml' attributename='transform' type='translate' values='0 0; 0 20; 0 0' begin='0' dur='0.6s' repeatcount='indefinite')
+      rect(x='10' y='0' width='4' height='20' fill='#333' transform='translate(0 11.5002)')
+        animatetransform(attributetype='xml' attributename='transform' type='translate' values='0 0; 0 20; 0 0' begin='0.2s' dur='0.6s' repeatcount='indefinite')
+      rect(x='20' y='0' width='4' height='20' fill='#333' transform='translate(0 1.83315)')
+        animatetransform(attributetype='xml' attributename='transform' type='translate' values='0 0; 0 20; 0 0' begin='0.4s' dur='0.6s' repeatcount='indefinite')
+  div(style='padding-top :60px;padding-left :15%;padding-right :15%;')
+    table(width='100%')
+      tr
+        td.col-md-3.red
+          p(style='color: red;') 历史访问人次: #{total_visits2}
+        td.col-md-3.red
+          if halfVCn == 1
+            p(style='color: red;') 过半数公司市值坚挺
+          else
+            p(style='color: red;') 过半数公司市值下跌
+        td.col-md-6.red
+          marquee(behavior='scroll' scrollamount='9' direction='left')
+            p(style='color: red;')  └(^o^)┘  每天早晚各更新一次(周日除外)，最近更新: #{latest_update_time2} | 上市地区简写对照 US:美国,HK:香港,CN:中国大陆  Y(^_^)Y  
+    table#table.table.table-bordered.table-condensed.table-hover(style='min-height: 600px')
+  // include footer
+  include footer.pug
+  // import javascript
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-table.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-table-zh-CN.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-table-export.min.js')
+  script(type='text/javascript' src='/javascripts/tableExport.min.js')
+  script(type='text/javascript' src='/javascripts/myrankcn.js')
+
